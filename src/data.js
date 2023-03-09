@@ -1,0 +1,42 @@
+export const data = [
+  {
+    id: 1,
+    name: "Ashton",
+    date: "1/17/2023",
+    description: "Duis mattis egestas metus.",
+    url: "http://url will be here which is the download linke of the file as name.pdf",
+    poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREGKqo_Ii25OzAQXB0fIaHU3t80FComBw3_w&usqp=CAU",
+  },
+  {
+    id: 2,
+    name: "Conway",
+    date: "8/20/2022",
+    description: "Maecenas tristique, est et tempus semper.",
+    url: "http://url will be here which is the download linke of the file as name.pdf",
+    poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpG43ipBf-RPOINUJ6F0YLdJQEu7eHvXSKXQ&usqp=CAU",
+  },
+  {
+    id: 3,
+    name: "Clementia",
+    date: "6/22/2022",
+    description: "Fusce posuere felis sed lacus.",
+    url: "http://url will be here which is the download linke of the file as name.pdf",
+    poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3vgVqAzySbwCL7PMMLUMuppDREzZ5w8MbNg&usqp=CAU",
+  },
+  {
+    id: 4,
+    name: "Jeannine",
+    date: "5/27/2022",
+    description: "Integer aliquet, massa id lobortis convallis.",
+    url: "http://url will be here which is the download linke of the file as name.pdf",
+    poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSffy-E2JYV_IPMkYoD35JA5m0tRtFtei2g1g&usqp=CAU",
+  },
+  {
+    id: 5,
+    name: "Yance",
+    date: "11/18/2022",
+    description: "Suspendisse potenti. Nullam porttitor lacus at turpis.",
+    url: "http://url will be here which is the download linke of the file as name.pdf",
+    poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjLp5j4-m7JOlKOd85zbZ85nVu1thUAiYXXAWyasLT7LnD8pFyIHg338jTlaulzDNPLqI&usqp=CAU",
+  },
+];
