@@ -1,12 +1,11 @@
 import React from "react";
-import { data } from "../data";
 import DashBoardItem from "./DashBoardItem";
 import LoaderButton from "./LoaderButton";
 
-const DashBoardItems = () => {
+const DashBoardItems = ({data}) => {
   return (
     <div className="w-full h-full flex flex-col items-center dark:text-white">
-      {data.map((item) => (
+      {data?.length > 0 && data.map((item) => (
         <DashBoardItem key={item.id} item={item} />
       ))}
 

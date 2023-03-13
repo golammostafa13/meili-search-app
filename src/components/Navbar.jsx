@@ -1,8 +1,23 @@
+import MeiliSearch from "meilisearch";
 import React from "react";
 import nbrLogo from "../assets/nbrLogo.png";
 import Header from "./Header";
 
-const Navbar = () => {
+const Navbar = ({ setData }) => {
+  const client = new MeiliSearch({
+    host: "https://ms-53c6a4f8d1e7-2575.lon.meilisearch.io",
+    apiKey: "c40fe61d6b0787b2761da41b2643b925837e2ec2",
+  });
+  const handleSearch = (value) => {
+    client
+      .index("data")
+      .search(value)
+      .then((res) => {
+        console.log(res);
+        setData(res.hits);
+      });
+  };
+
   return (
     <div className="backdrop-filter backdrop-blur-xl bg-opacity-75 w-full h-[10%] z-10 sticky top-0 bg-gray-100 dark:bg-gray-700 dark:text-white border-b-1 border-b-indigo-100 shadow-sm flex items-center">
       <div className="w-1/3 h-28 flex items-center justify-center px-2">
@@ -16,6 +31,7 @@ const Navbar = () => {
             placeholder="Search"
             aria-label="Search"
             aria-describedby="button-addon3"
+            onChange={(e) => handleSearch(e.target.value)}
           />
           <button
             class="relative z-[2] rounded-r border-2 border-indigo-500 px-6 py-2 text-xs font-medium uppercase text-primary transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
