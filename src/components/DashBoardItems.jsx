@@ -5,7 +5,7 @@ import LoaderButton from "./LoaderButton";
 
 const DashBoardItems = () => {
   return (
-    <div className="w-full h-full flex flex-col items-center">
+    <div className="w-full h-full flex flex-col items-center dark:text-white">
       {data.map((item) => (
         <DashBoardItem key={item.id} item={item} />
       ))}

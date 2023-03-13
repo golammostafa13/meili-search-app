@@ -1,11 +1,9 @@
 import React from 'react';
 import DashBoardItems from './DashBoardItems';
-import Header from './Header';
 
-const DashBoard = () => {
+const DashBoard = ({darkToggle}) => {
     return (
-        <div className='w-full h-fit -z-10 dashboardStyle flex items-center flex-col'>
-            <Header />
+        <div className={`w-full h-fit -z-10 ${darkToggle ? 'dark:bg-gray-900' : 'bg-gray-50'} flex items-center flex-col dark:bg-gray-700`} id='scroll-board'>
             <DashBoardItems />
         </div>
     );
