@@ -3,6 +3,7 @@ import DashBoard from "./components/Dashboard/DashBoard";
 import Navbar from "./components/Navbar/Navbar";
 import ScrollButton from "./components/ui/ScrollButton";
 import MeiliSearch from "meilisearch";
+import { privateData } from "./utils";
 
 function App() {
   const [darkToggle, setDarkToggle] = useState(false);
@@ -12,8 +13,8 @@ function App() {
 
   useEffect(() => {
     const client = new MeiliSearch({
-      host: "https://ms-fc410514e466-2575.nyc.meilisearch.io",
-      apiKey: "2a3cd916ca2937189fd9f0ecf1d25d4b93193d95",
+      host: privateData.hostUrl,
+      apiKey: privateData.apiKey,
     });
     client
       .index("new-dataset")
@@ -26,7 +27,11 @@ function App() {
   }, []);
 
   return (
-    <div className={`w-full h-full overflow-x-hidden overflow-y-visible ${darkToggle && "dark"}`}>
+    <div
+      className={`w-full h-full overflow-x-hidden overflow-y-visible ${
+        darkToggle && "dark"
+      }`}
+    >
       <Navbar
         setData={setData}
         setHits={setHits}

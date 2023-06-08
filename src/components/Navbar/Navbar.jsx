@@ -3,11 +3,20 @@ import React from "react";
 import nbrLogo from "../../assets/nbrLogo.png";
 import Header from "./Header";
 import ToggleDayNightButton from "./ToggleDayNightButton";
+import { privateData } from "../../utils";
 
-const Navbar = ({ setData, setHits, setTime, hits, time, darkToggle, setDarkToggle }) => {
+const Navbar = ({
+  setData,
+  setHits,
+  setTime,
+  hits,
+  time,
+  darkToggle,
+  setDarkToggle,
+}) => {
   const client = new MeiliSearch({
-    host: "https://ms-fc410514e466-2575.nyc.meilisearch.io",
-    apiKey: "2a3cd916ca2937189fd9f0ecf1d25d4b93193d95",
+    host: privateData.hostUrl,
+    apiKey: privateData.apiKey,
   });
   const handleSearch = (value) => {
     client
