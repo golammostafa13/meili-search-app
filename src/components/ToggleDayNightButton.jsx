@@ -8,12 +8,12 @@ const ToggleDayNightButton = ({darkToggle, setDarkToggle}) => {
 
   return (
     <div
-      className={`fixed left-24 bottom-10 h-12 w-12 rounded-full bg-slate-600 hover:bg-gray-300 text-3xl flex justify-center items-center cursor-pointer hover:bg-transparent transition-all duration-700 text-white z-100 ${
+      className={`flex h-9 w-10 rounded-full bg-slate-600 text-3xl justify-center items-center cursor-pointer transition-all duration-700 text-white z-100 mr-8 ${
         darkToggle ? "hover:text-red-500" : "hover:text-yellow-500"
       }`}
       onClick={handleToggle}
     >
-      {darkToggle ? <BsFillSunFill /> : <BsFillMoonStarsFill />}
+      {darkToggle ? <BsFillSunFill size={16} /> : <BsFillMoonStarsFill size={16} />}
     </div>
   );
 };

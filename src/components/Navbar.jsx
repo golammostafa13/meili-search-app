@@ -2,24 +2,26 @@ import MeiliSearch from "meilisearch";
 import React from "react";
 import nbrLogo from "../assets/nbrLogo.png";
 import Header from "./Header";
+import ToggleDayNightButton from "./ToggleDayNightButton";
 
-const Navbar = ({ setData }) => {
+const Navbar = ({ setData, setHits, setTime, hits, time, darkToggle, setDarkToggle }) => {
   const client = new MeiliSearch({
-    host: "https://ms-53c6a4f8d1e7-2575.lon.meilisearch.io",
-    apiKey: "c40fe61d6b0787b2761da41b2643b925837e2ec2",
+    host: "https://ms-fc410514e466-2575.nyc.meilisearch.io",
+    apiKey: "2a3cd916ca2937189fd9f0ecf1d25d4b93193d95",
   });
   const handleSearch = (value) => {
     client
-      .index("data")
+      .index("new-dataset")
       .search(value)
       .then((res) => {
-        console.log(res);
+        setHits(res.estimatedTotalHits);
+        setTime(res.processingTimeMs);
         setData(res.hits);
       });
   };
 
   return (
-    <div className="backdrop-filter backdrop-blur-xl bg-opacity-75 w-full h-[10%] z-10 sticky top-0 bg-gray-100 dark:bg-gray-700 dark:text-white border-b-1 border-b-indigo-100 shadow-sm flex items-center">
+    <div className="backdrop-filter backdrop-blur-xl bg-opacity-75 w-full h-[100px] z-10 fixed top-0 bg-gray-100 dark:bg-gray-700 dark:text-white border-b-1 border-b-indigo-100 shadow-sm flex items-center gap-2">
       <div className="w-1/3 h-28 flex items-center justify-center px-2">
         <img className="w-28 h-fit" src={nbrLogo} alt="NBG logo" />
       </div>
@@ -43,7 +45,11 @@ const Navbar = ({ setData }) => {
           </button>
         </div>
       </div>
-      <Header />
+      <Header hits={hits} time={time} />
+      <ToggleDayNightButton
+        darkToggle={darkToggle}
+        setDarkToggle={setDarkToggle}
+      />
     </div>
   );
 };
