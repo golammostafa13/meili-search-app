@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
-import DashBoard from "./components/DashBoard";
-import Navbar from "./components/Navbar";
-import ScrollButton from "./components/ScrollButton";
-import ToggleDayNightButton from "./components/ToggleDayNightButton";
+import DashBoard from "./components/Dashboard/DashBoard";
+import Navbar from "./components/Navbar/Navbar";
+import ScrollButton from "./components/ui/ScrollButton";
 import MeiliSearch from "meilisearch";
 
 function App() {
@@ -20,20 +19,25 @@ function App() {
       .index("new-dataset")
       .search("")
       .then((res) => {
-        setHits(res.estimatedTotalHits)
-        setTime(res.processingTimeMs)
+        setHits(res.estimatedTotalHits);
+        setTime(res.processingTimeMs);
         setData(res.hits);
       });
   }, []);
 
   return (
-    <div
-      className={`w-full h-full overflow-x-hidden ${darkToggle && "dark"}`}
-    >
-      <Navbar setData={setData} setHits={setHits} setTime={setTime} hits={hits} time={time} darkToggle={darkToggle} setDarkToggle={setDarkToggle} />
+    <div className={`w-full h-full overflow-x-hidden overflow-y-visible ${darkToggle && "dark"}`}>
+      <Navbar
+        setData={setData}
+        setHits={setHits}
+        setTime={setTime}
+        hits={hits}
+        time={time}
+        darkToggle={darkToggle}
+        setDarkToggle={setDarkToggle}
+      />
       <DashBoard darkToggle={darkToggle} data={data} />
       <ScrollButton />
-      
     </div>
   );
 }

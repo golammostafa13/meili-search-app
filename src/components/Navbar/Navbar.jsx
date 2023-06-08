@@ -1,6 +1,6 @@
 import MeiliSearch from "meilisearch";
 import React from "react";
-import nbrLogo from "../assets/nbrLogo.png";
+import nbrLogo from "../../assets/nbrLogo.png";
 import Header from "./Header";
 import ToggleDayNightButton from "./ToggleDayNightButton";
 

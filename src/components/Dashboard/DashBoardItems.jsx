@@ -1,6 +1,5 @@
 import React from "react";
 import DashBoardItem from "./DashBoardItem";
-import LoaderButton from "./LoaderButton";
 
 const DashBoardItems = ({data}) => {
   return (
@@ -8,7 +7,6 @@ const DashBoardItems = ({data}) => {
       {data?.length > 0 && data.map((item) => (
         <DashBoardItem key={item.id} item={item} />
       ))}
-      {/* <LoaderButton /> */}
     </div>
   );
 };
