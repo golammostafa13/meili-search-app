@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import DashBoard from "./components/Dashboard/DashBoard";
 import Navbar from "./components/Navbar/Navbar";
 import ScrollButton from "./components/ui/ScrollButton";
-import MeiliSearch from "meilisearch";
 import { privateData } from "./utils";
+import { client } from "./services/client";
 
 function App() {
   const [darkToggle, setDarkToggle] = useState(false);
@@ -12,12 +12,8 @@ function App() {
   const [time, setTime] = useState(0);
 
   useEffect(() => {
-    const client = new MeiliSearch({
-      host: privateData.hostUrl,
-      apiKey: privateData.apiKey,
-    });
     client
-      .index("new-dataset")
+      .index(privateData.datasetName)
       .search("")
       .then((res) => {
         setHits(res.estimatedTotalHits);

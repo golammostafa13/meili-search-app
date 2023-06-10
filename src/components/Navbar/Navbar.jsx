@@ -1,9 +1,9 @@
-import MeiliSearch from "meilisearch";
 import React from "react";
 import nbrLogo from "../../assets/nbrLogo.png";
 import Header from "./Header";
 import ToggleDayNightButton from "./ToggleDayNightButton";
 import { privateData } from "../../utils";
+import { client } from "../../services/client";
 
 const Navbar = ({
   setData,
@@ -14,13 +14,10 @@ const Navbar = ({
   darkToggle,
   setDarkToggle,
 }) => {
-  const client = new MeiliSearch({
-    host: privateData.hostUrl,
-    apiKey: privateData.apiKey,
-  });
+  
   const handleSearch = (value) => {
     client
-      .index("new-dataset")
+      .index(privateData.datasetName)
       .search(value)
       .then((res) => {
         setHits(res.estimatedTotalHits);
