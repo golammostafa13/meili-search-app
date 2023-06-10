@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+# Meili Search App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a React.js app that utilizes MeiliSearch for fast and relevant search queries. It features a dark/light toggle mode and smooth scrolling.
 
-## Available Scripts
+## Description
 
-In the project directory, you can run:
+The Meili Search App is a search interface that integrates with MeiliSearch, an open-source search engine. It allows users to search and retrieve data with ease, while providing a visually pleasing experience through a dark/light toggle mode. The app also incorporates smooth scrolling for seamless navigation.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Search: Perform real-time search queries to retrieve relevant results.
+- Dark/Light Toggle Mode: Switch between dark and light themes for personalized viewing.
+- Smooth Scrolling: Enjoy a smooth scrolling experience while navigating through the app.
+- Responsive Design: The app is responsive and adapts to different screen sizes for optimal user experience.
+- MeiliSearch Integration: The app integrates with MeiliSearch to provide fast and accurate search results.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+- React.js: A JavaScript library for building user interfaces.
+- MeiliSearch: An open-source search engine for efficient search operations.
+- Tailwind CSS: A utility-first CSS framework for rapid UI development.
+- HTML and CSS: Markup and styling for the user interface.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation
 
-### `npm run build`
+1. Clone the repository: `git clone https://github.com/golammostafa13/meili-search-app.git`
+2. Navigate to the project directory: `cd meili-search-app`
+3. Install dependencies: `npm install`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Configuration
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To configure the Meili Search host and API key, follow these steps:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Open the `src/services/meiliSearch.js` file.
+2. Set the `MEILI_SEARCH_HOST` variable to your Meili Search server's URL.
+3. Set the `MEILI_SEARCH_API_KEY` variable to your Meili Search server's API key.
 
-### `npm run eject`
+```javascript
+const MEILI_SEARCH_HOST = "https://your-meili-search-url";
+const MEILI_SEARCH_API_KEY = "your-api-key";
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Note: Ensure that you have a running instance of MeiliSearch and obtain the API key for your server.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Usage
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Start the app: `npm start`
+2. Open the app in your browser.
+3. Enter your search query in the search bar.
+4. The app will perform a search query against MeiliSearch and display the matching results.
+5. Toggle between dark and light mode using the theme toggle button.
+6. Enjoy a smooth scrolling experience while navigating through the app.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Contributing
 
-## Learn More
+Contributions are welcome! If you encounter any issues or have suggestions for improvements, please feel free to submit a pull request or open an issue.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## License
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+[MIT License](LICENSE)
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Repository: [https://github.com/golammostafa13/meili-search-app](https://github.com/golammostafa13/meili-search-app)
