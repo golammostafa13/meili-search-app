@@ -29,7 +29,7 @@ const Navbar = ({
   return (
     <div className="backdrop-filter backdrop-blur-xl bg-opacity-75 w-full h-[100px] z-10 fixed top-0 bg-gray-100 dark:bg-gray-700 dark:text-white border-b-1 border-b-indigo-100 shadow-sm flex items-center gap-2">
       <div className="w-1/3 h-28 flex items-center justify-center px-2">
-        <img className="w-28 h-fit" src={nbrLogo} alt="NBG logo" />
+        <img className="w-16 h-16 rounded-full absolute ring-2 ring-slate-800" src={nbrLogo} alt="NBG logo" />
       </div>
       <div class="w-1/3 flex items-center justify-center">
         <div class="relative flex w-full flex-wrap items-stretch p-2">
