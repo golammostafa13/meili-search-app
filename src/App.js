@@ -44,7 +44,7 @@ function App() {
       </div>
     );
   } else {
-    content = <DashBoard darkToggle={darkToggle} data={data} limit={limit} setLimit={setLimit} />;
+    content = <DashBoard darkToggle={darkToggle} data={data} limit={limit} setLimit={setLimit} searchTerm={searchValue}/>;
   }
 
   return (
