@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { convertCamelCaseToWords } from "../../utils";
 
 const Description = ({ item, searchTerm }) => {
   const { id, url, poster, ...descItem } = item || {};
 
   const truncateDescription = (description, searchTerm, maxLength) => {
-    const regex = new RegExp(`\\b(${searchTerm})\\b`, "gi");
     const words = description.split(" ");
     const lowerCaseSearchTerm = searchTerm.toLowerCase();
     const searchIndex = words.findIndex(
