@@ -4,6 +4,7 @@ import { appVariable, truncateDescription } from "../../utils";
 const Description = ({ item, searchTerm }) => {
   const { sroNumber, publishDate, content, description } = item || {};
   let contentDesc = truncateDescription(content, searchTerm, appVariable.contentWords)
+  
   return (
     <div className="lg:w-2/3  md:w-full flex flex-col gap-2 p-3 md:text-base sm:text-xs md:overflow-y-auto">
       <div className="flex w-full border-b py-1">
